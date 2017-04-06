@@ -1,0 +1,78 @@
+body {
+	width: 100%;
+}
+
+.title-text {
+    font-weight: 900;
+    font-size: 34px;
+	font-family: arial;
+	text-align: center;
+}
+
+.button-text {
+	font-weight: 900;
+	text-align: center;
+	padding: 4px;
+	font-family: arial;
+}
+
+.tweet-created {
+	padding: 0px;
+	margin: 0px;
+	text-align: right;
+	background-color: #FF0000;
+}
+
+.tweet-link {
+	padding: 0px;
+	margin: 0px;
+	text-align: right;
+	background-color: #FF0000;
+}
+
+.tweet-text {
+	padding: 0px;
+	margin: 0px;
+	background-color: #FFFFFF;
+}
+
+#search-input {
+	margin-top: 4%;
+	margin-left: 9%;
+	margin-right: 9%;
+	width: 80%;
+}
+
+#search-button {
+	cursor:pointer;
+	background-color: #0000FF;
+	width: 100%;
+	height: 32px;
+}
+
+#search-button:hover {
+	cursor:pointer;
+	background-color: #F0FF00;
+	width: 100%;
+	height: 32px;
+}
+
+#search-button:active {
+	cursor:pointer;
+	background-color: #00FF00;
+	width: 100%;
+	height: 32px;
+}
+
+#container {
+	background: #FF0000;
+	width: 50%;
+	margin: 0 auto;
+}
+
+#icon-image {
+	width: 100%;
+	margin-top: -10%;
+}
+
+

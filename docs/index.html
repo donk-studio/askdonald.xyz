@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>json-query-tester</title>
+
+		<link rel="stylesheet" type="text/css" href="styles.css">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+	</head>
+
+	<body>
+		<div id="container">
+			<div id="top-div">
+				<p class="title-text"> asktrump.xyz </p>
+				<img id="icon-image" src="background.png"/>
+			<div>
+			<div id="input-div">
+				<input type="text" placeholder="ask trump..." id="search-input" onkeydown="search(this)"/> 
+				<div id="search-button">
+					<p class="button-text"> SEARCH </p>
+				</div>
+			</div>
+		</div>
+		<div id="log-div">
+
+		</div>
+	</body>
+	
+	<script type="text/javascript">
+			
+			var searchList = ['','','','','',''];
+	
+			// On Enter Press
+			function search(element) {
+				if(event.keyCode == 13) {
+					var searchString = element.value;
+					var splitString = searchString.split(" ");
+					for (i = 0; i < splitString.length; i++) {
+						searchList[i] = splitString[i];
+					}
+					
+					$('#log-div').empty();
+					askDonald(searchList);
+				}
+			}
+		
+			// On Search Button Press
+			$('#search-button').click(function() {
+				var searchString = $('#search-input').val();
+				var splitString = searchString.split(" ");
+				for (i = 0; i < splitString.length; i++) {
+					searchList[i] = splitString[i];
+				}
+					
+				$('#log-div').empty();
+				askDonald(searchList);
+			});
+			
+			// SEARCH json text elements for up to 6 terms
+			function askDonald(searchList) {
+				$.getJSON("https://raw.githubusercontent.com/donk-studio/askdonald.xyz/master/bits/apiResponse-04-04-17.json", function(result){
+					$.each(result, function(i, field){
+						if ((field.text.toUpperCase().includes(searchList[0].toUpperCase()))
+						&& (field.text.toUpperCase().includes(searchList[1].toUpperCase()))
+						&& (field.text.toUpperCase().includes(searchList[2].toUpperCase()))
+						&& (field.text.toUpperCase().includes(searchList[3].toUpperCase()))
+						&& (field.text.toUpperCase().includes(searchList[4].toUpperCase()))
+						&& (field.text.toUpperCase().includes(searchList[5].toUpperCase()))) {
+						
+							$('<p class="tweet-created">' + field.created_at + '</p>').appendTo('#log-div');
+							$('<p class="tweet-link"><a href="' + 'https://twitter.com/realDonaldTrump/status/' + field.id_str + '">LINK</p>').appendTo('#log-div');
+							 $('<p class="tweet-text">' + field.text + '</p>').appendTo('#log-div');
+							
+						} else {
+							$('').appendTo('#log-div'); // shouldn't have to do this...
+						}		
+					});
+				});
+			}
+			
+	</script>
+
+</html>
