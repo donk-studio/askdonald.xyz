@@ -2,12 +2,6 @@ body {
 	width: 100%;
 }
 
-.title-text {
-    font-weight: 900;
-    font-size: 34px;
-	font-family: arial;
-	text-align: center;
-}
 
 .button-text {
 	font-weight: 900;
@@ -66,7 +60,7 @@ body {
 
 #container {
 	background: #FF0000;
-	width: 50%;
+	width: 70%;
 	margin: 0 auto;
 }
 
