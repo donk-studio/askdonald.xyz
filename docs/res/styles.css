@@ -32,34 +32,36 @@ body {
 
 #search-input {
 	margin-top: 4%;
-	margin-left: 9%;
-	margin-right: 9%;
-	width: 80%;
+	margin-left: 22%;
+	margin-right: 22%;
+	margin-bottom: 3%;
+	width: 55%;
+	text-align: center;
 }
 
 #search-button {
 	cursor:pointer;
-	background-color: #0000FF;
+	background-color: #5c79c4;
 	width: 100%;
 	height: 32px;
 }
 
 #search-button:hover {
 	cursor:pointer;
-	background-color: #F0FF00;
+	background-color: #7796e5;
 	width: 100%;
 	height: 32px;
 }
 
 #search-button:active {
 	cursor:pointer;
-	background-color: #00FF00;
+	background-color: #5fd378;
 	width: 100%;
 	height: 32px;
 }
 
 #container {
-	background: #FF0000;
+	background: #000000;
 	width: 60%;
 	margin: 0 auto;
 }

@@ -3,7 +3,7 @@
   <head>
 	<title>json-query-tester</title>
 
-		<link rel="stylesheet" type="text/css" href="styles.css">
+		<link rel="stylesheet" type="text/css" href="res/styles.css">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 
@@ -12,7 +12,7 @@
 	<body>
 		<div id="container">
 			<div id="img-div">
-				<img id="icon-image" src="background.png"/>
+				<img id="icon-image" src="res/background.png"/>
 			<div>
 			<div id="input-div">
 				<input type="text" placeholder="ask trump..." id="search-input" onkeydown="search(this)"/> 
@@ -58,7 +58,7 @@
 			
 			// SEARCH json text elements for up to 6 terms
 			function askDonald(searchList) {
-				$.getJSON("https://raw.githubusercontent.com/donk-studio/askdonald.xyz/master/bits/apiResponse-04-04-17.json", function(result){
+				$.getJSON("https://raw.githubusercontent.com/donk-studio/askdonald.xyz/master/docs/res/apiResponse-04-04-17.json", function(result){
 					$.each(result, function(i, field){
 						if ((field.text.toUpperCase().includes(searchList[0].toUpperCase()))
 						&& (field.text.toUpperCase().includes(searchList[1].toUpperCase()))
