@@ -58,7 +58,7 @@
 			
 			// SEARCH json text elements for up to 6 terms
 			function askDonald(searchList) {
-				$.getJSON("https://raw.githubusercontent.com/donk-studio/askdonald.xyz/master/docs/res/apiResponse-04-04-17.json", function(result){
+				$.getJSON("https://raw.githubusercontent.com/donk-studio/askdonald.xyz/master/docs/res/test.json", function(result){
 					$.each(result, function(i, field){
 						if ((field.text.toUpperCase().includes(searchList[0].toUpperCase()))
 						&& (field.text.toUpperCase().includes(searchList[1].toUpperCase()))
@@ -68,7 +68,7 @@
 						&& (field.text.toUpperCase().includes(searchList[5].toUpperCase()))) {
 						
 							$('<p class="tweet-created">' + field.created_at + '</p>').appendTo('#log-div');
-							$('<p class="tweet-link"><a href="' + 'https://twitter.com/realDonaldTrump/status/' + field.id_str + '">LINK</p>').appendTo('#log-div');
+							$('<p class="tweet-link"><a href="' + 'https://twitter.com/' + field.user.screen_name + '/status/' + field.id_str + '">LINK</p>').appendTo('#log-div');
 							 $('<p class="tweet-text">' + field.text + '</p>').appendTo('#log-div');
 							
 						} else {

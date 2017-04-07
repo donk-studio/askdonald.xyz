@@ -3,19 +3,21 @@ import twitterKeys as tKey # get keys from .gitignored twitterKeys.py file
 import time
 import json
 
+SCREEN_NAME = "potus" # set screen name to scrape
+
 twitter = Twython(tKey.CONSUMER_KEY, tKey.CONSUMER_SECRET, tKey.ACCESS_KEY, tKey.ACCESS_SECRET)
 
-user_timeline = twitter.get_user_timeline(screen_name="realDonaldTrump",count=1)
+user_timeline = twitter.get_user_timeline(screen_name = SCREEN_NAME, count = 1)
 tweetList = [user_timeline[0]['id']] ## the latest starting tweet id; iterates backwards from
 
 tweetCount = 0
 
-outputJson = open("tweets.json", "w")
+outputJson = open("tweetsOut.json", "w")
 outputJson.write("[\n")
 
 for i in range(0, 64): ## iterate through 3200 (max) tweets
 ## tweet extract method with the last tweetListt item as the max_id
-    user_timeline = twitter.get_user_timeline(screen_name = "realDonaldTrump",
+    user_timeline = twitter.get_user_timeline(screen_name = SCREEN_NAME,
     count = 200, include_retweets = False, max_id = tweetList[-1])
 
     for tweet in user_timeline:
@@ -24,7 +26,7 @@ for i in range(0, 64): ## iterate through 3200 (max) tweets
         	
         # print (tweet) # add the tweet to json array
         
-        outputJson.write(json.dumps(tweet)+",")
+        outputJson.write(json.dumps(tweet)+",") # comma between entries (delete final one after manually)
 		
         tweetList.append(tweet['id']) ## append tweet id's
 		
