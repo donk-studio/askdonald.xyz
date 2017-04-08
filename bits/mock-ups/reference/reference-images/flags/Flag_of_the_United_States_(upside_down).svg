@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   width="1330"
+   height="700"
+   id="Flag of the United States"
+   viewBox="0 0 18525 9750"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="Flag_of_the_United_States_(upside_down).svg">
+  <metadata
+     id="metadata38">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs36" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1474"
+     inkscape:window-height="841"
+     id="namedview34"
+     showgrid="false"
+     inkscape:zoom="0.15737113"
+     inkscape:cx="57.267131"
+     inkscape:cy="105.22091"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Flag of the United States" />
+  <g
+     id="inversion">
+    <rect
+       width="18525"
+       height="9750"
+       id="red background"
+       x="0"
+       y="0"
+       style="fill:#bf0a30" />
+    <g
+       id="g5"
+       style="fill:#ffffff">
+      <rect
+         width="18525"
+         height="750"
+         y="750"
+         id="rect7"
+         x="0" />
+      <rect
+         width="18525"
+         height="750"
+         y="2250"
+         id="rect9"
+         x="0" />
+      <rect
+         width="18525"
+         height="750"
+         y="3750"
+         id="rect11"
+         x="0" />
+      <rect
+         width="18525"
+         height="750"
+         y="5250"
+         id="rect13"
+         x="0" />
+      <rect
+         width="18525"
+         height="750"
+         y="6750"
+         id="rect15"
+         x="0" />
+      <rect
+         width="18525"
+         height="750"
+         y="8250"
+         id="rect17"
+         x="0" />
+    </g>
+    <rect
+       id="blue field"
+       width="7410"
+       height="5250"
+       x="0"
+       y="0"
+       style="fill:#002868" />
+    <g
+       id="star_rows_1_and_2">
+      <g
+         id="star_row_2">
+        <polygon
+           id="first_star_in_second_row"
+           transform="matrix(300.3,0,0,300.3,1235,1050)"
+           points="-0.95105652,-0.30901699 0.95105652,-0.30901699 -0.58778525,0.80901699 0,-1 0.58778525,0.80901699 "
+           style="fill:#ffffff" />
+        <!-- Note the points of the above polygon specify a 5-pointed star centered at (0,0) with radius 1. -->
+        <use
+           id="second star in second row"
+           xlink:href="#first_star_in_second_row"
+           x="1235"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           id="third star in second row"
+           xlink:href="#first_star_in_second_row"
+           x="2470"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           id="fourth star in second row"
+           xlink:href="#first_star_in_second_row"
+           x="3705"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           id="fifth star in second row"
+           xlink:href="#first_star_in_second_row"
+           x="4940"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+      <g
+         id="star_row_1">
+        <use
+           id="five of six stars in top row"
+           xlink:href="#star_row_2"
+           x="617.5"
+           y="-525"
+           width="100%"
+           height="100%" />
+        <use
+           id="first star in top row"
+           xlink:href="#first_star_in_second_row"
+           x="-617.5"
+           y="-525"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <use
+       id="star rows 3 and 4"
+       xlink:href="#star_rows_1_and_2"
+       y="1050"
+       x="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="star rows 5 and 6"
+       xlink:href="#star_rows_1_and_2"
+       y="2100"
+       x="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="star rows 7 and 8"
+       xlink:href="#star_rows_1_and_2"
+       y="3150"
+       x="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="star row 9"
+       xlink:href="#star_row_1"
+       y="4200"
+       x="0"
+       width="100%"
+       height="100%" />
+  </g>
+</svg>
