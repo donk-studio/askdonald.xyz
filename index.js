@@ -13,4 +13,5 @@ app.get('/tweets', function(req, res, next) {
 });
 
 app.listen(port);
+console.log('Server running on 127.0.0.1:8080');
 
