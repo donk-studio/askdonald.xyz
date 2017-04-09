@@ -1,0 +1,29 @@
+{
+  "name": "askdonald",
+  "version": "1.0.0",
+  "description": "Ask The Don Anything",
+  "main": "index.js",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "express": "^4.15.2",
+    "sqlite3": "^3.1.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/donk-studio/askdonald.xyz.git"
+  },
+  "keywords": [
+    "ask",
+    "donald"
+  ],
+  "author": "gg km",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/donk-studio/askdonald.xyz/issues"
+  },
+  "homepage": "https://github.com/donk-studio/askdonald.xyz#readme"
+}
