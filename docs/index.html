@@ -11,13 +11,9 @@
 
 	<body>
 		<div id="container">
-			<div id="img-div">
-				<img id="bg-image" src="res/background.png"/>
-			<div>
 			<div id="input-div">
-				<input type="text" placeholder="ask trump..." id="search-input" onkeydown="search(this)"/> 
-				<div id="search-button">
-					<p class="button-text"> SEARCH </p>
+				<input type="text" placeholder="Excuse me, Mr. Trump..." id="search-input" onkeydown="search(this)"/>
+				<div id="search-button">ASK</div>
 				</div>
 			</div>
 		</div>
@@ -25,11 +21,11 @@
 
 		</div>
 	</body>
-	
+
 	<script type="text/javascript">
-			
+
 			var searchList = ['','','','','',''];
-	
+
 			// On Enter Press
 			function search(element) {
 				if(event.keyCode == 13) {
@@ -38,12 +34,12 @@
 					for (i = 0; i < splitString.length; i++) {
 						searchList[i] = splitString[i];
 					}
-					
+
 					$('#log-div').empty();
 					askDonald(searchList);
 				}
 			}
-		
+
 			// On Search Button Press
 			$('#search-button').click(function() {
 				var searchString = $('#search-input').val();
@@ -51,11 +47,11 @@
 				for (i = 0; i < splitString.length; i++) {
 					searchList[i] = splitString[i];
 				}
-					
+
 				$('#log-div').empty();
 				askDonald(searchList);
 			});
-			
+
 			// SEARCH json text elements for up to 6 terms
 			function askDonald(searchList) {
 				$.getJSON("https://raw.githubusercontent.com/donk-studio/askdonald.xyz/master/docs/res/test.json", function(result){
@@ -66,18 +62,18 @@
 						&& (field.text.toUpperCase().includes(searchList[3].toUpperCase()))
 						&& (field.text.toUpperCase().includes(searchList[4].toUpperCase()))
 						&& (field.text.toUpperCase().includes(searchList[5].toUpperCase()))) {
-						
+
 							$('<p class="tweet-created">' + field.created_at + '</p>').appendTo('#log-div');
 							$('<p class="tweet-link"><a href="' + 'https://twitter.com/' + field.user.screen_name + '/status/' + field.id_str + '">LINK</p>').appendTo('#log-div');
 							 $('<p class="tweet-text">' + field.text + '</p>').appendTo('#log-div');
-							
+
 						} else {
 							$('').appendTo('#log-div'); // shouldn't have to do this...
-						}		
+						}
 					});
 				});
 			}
-			
+
 	</script>
 
 </html>
