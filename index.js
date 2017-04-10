@@ -6,6 +6,12 @@ var Promise = require('bluebird');
 var app = express();
 var port = 8080;
 
+app.use(express.static('docs'));
+
+app.get('/', function(req, res, next) {
+  res.sendFile('index.html', { root: __dirname + '/docs/'});
+});
+
 app.get('/tweets', function(req, res, next) {
   db.all('SELECT * FROM TWEETS LIMIT 10', function(error, rows) {
     res.send(rows);
