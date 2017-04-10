@@ -6,12 +6,15 @@ conn = sqlite3.connect('ASKDONALD.db')
 print "Opened database successfully";
 
 # CREATE TABLE
-conn.execute('''CREATE TABLE TWEETS
+try:
+    conn.execute('''CREATE TABLE TWEETS
        (ID INTEGER PRIMARY KEY AUTOINCREMENT,
        DATE TEXT NOT NULL,
        TEXT TEXT NOT NULL,
 	   SOURCE TEXT NOT NULL);''')
-print "Table created successfully";
+    print "Table created successfully";
+except:
+    pass
 
 # ITERATE THROUGH JSON
 with open('source.json') as json_data:
