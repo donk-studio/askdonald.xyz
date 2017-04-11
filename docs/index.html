@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-	<title>json-query-tester</title>
-
+	<title>Ask The Donald</title>
 		<link rel="stylesheet" type="text/css" href="res/styles.css">
-
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-
 	</head>
 
 	<body>
@@ -14,13 +11,11 @@
 			<div id="input-div">
 				<input type="text" placeholder="Excuse me, Mr. Trump..." id="search-input"/>
 				<div id="search-button">ASK</div>
-				</div>
 			</div>
 		</div>
 	</body>
 	
 	<script type="text/javascript">
-	
 			// Point on input focus
 			$( '#search-input' ).focus(function() {
 				$("#container").css({
@@ -77,12 +72,7 @@
 						console.log('error: ', error.message);
 					}
 				});
-
-				// $('<p class="tweet-created">' + field.created_at + '</p>').appendTo('#log-div');
-				// $('<p class="tweet-link"><a href="' + 'https://twitter.com/' + field.user.screen_name + '/status/' + field.id_str + '">LINK</p>').appendTo('#log-div');
-				//  $('<p class="tweet-text">' + field.text + '</p>').appendTo('#log-div');
 			}
-
 	</script>
 
 </html>

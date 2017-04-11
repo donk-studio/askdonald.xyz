@@ -3,26 +3,6 @@ body {
 	margin: 0;
 }
 
-.tweet-created {
-	padding: 0px;
-	margin: 0px;
-	text-align: right;
-	background-color: #FF0000;
-}
-
-.tweet-link {
-	padding: 0px;
-	margin: 0px;
-	text-align: right;
-	background-color: #FF0000;
-}
-
-.tweet-text {
-	padding: 0px;
-	margin: 0px;
-	background-color: #FFFFFF;
-}
-
 #search-input, #search-input:focus {
 	display: inline-block;
 	font-size: 22px;
@@ -65,24 +45,11 @@ body {
 	margin: 0 auto;
 }
 
-#log-div {
-
-}
-
-#img-div {
-
-}
-
 #input-div {
 	position: absolute;
 	width: 100vw;
 	bottom: 0px;
 	margin: 0;
-}
-
-#bg-image {
-	width: 100%;
-
 }
 
 
