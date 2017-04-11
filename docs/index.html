@@ -18,8 +18,31 @@
 			</div>
 		</div>
 	</body>
-
+	
 	<script type="text/javascript">
+	
+			// Point on input focus
+			$( '#search-input' ).focus(function() {
+				$("#container").css({
+					"background-image": "url(res/bg-focus.png)", 
+					"height"     : "100vh",
+					"background-attachment": "fixed",
+					"background-size": "cover",
+					"margin": "0 auto"
+				});
+			});
+			
+			// Return bg to idle on input blur
+			$("#search-input").blur(function() {
+				$("#container").css({
+					"background-image": "url(res/bg-idle.png)", 
+					"height"     : "100vh",
+					"background-attachment": "fixed",
+					"background-size": "cover",
+					"margin": "0 auto"
+				});
+			}); 
+
 			// On Enter Press
 			$("#search-input").on('keyup', function (event) {
 			    if (event.keyCode == 13) {
@@ -34,6 +57,15 @@
 
 			// SEARCH json text elements for up to 6 terms
 			function askDonald() {
+				
+				$("#container").css({
+					"background-image": "url(res/background.png)", 
+					"height"     : "100vh",
+					"background-attachment": "fixed",
+					"background-size": "cover",
+					"margin": "0 auto"
+				});
+				
 				var searchTerms = $("#search-input").val().split(" ");
 				console.log('searchTerms: ', searchTerms);
 				$.ajax("/tweets", {
