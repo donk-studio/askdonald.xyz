@@ -38,7 +38,7 @@ body {
 }
 
 #container {
-	background-image: url('background.png');
+	background-image: url('bg-idle.png');
 	background-size: cover;
 	background-attachment: fixed;
 	height: 100vh;
